@@ -12,24 +12,90 @@
     <h1>JS-HTTP Library Test</h1>
     <script src="dist/js-http.min.js"></script>
     <script>
+
         async function testJSHTTP() {
             try {
-                const response = await JSHTTP.get('https://jsonplaceholder.typicode.com/posts/1');
-                console.log('GET Response:', response);
+                // Make a GET request
+                const getResponse = await JSHTTP.get('https://jsonplaceholder.typicode.com/posts/1');
+                console.log('GET Response:', getResponse);
             } catch (error) {
                 console.error('GET Error:', error);
             }
 
             try {
-                const data = { userId: 1, id: 101, title: 'foo', body: 'bar' };
-                const response = await JSHTTP.post('https://jsonplaceholder.typicode.com/posts', data);
-                console.log('POST Response:', response);
+                // Make a POST request
+                const postData = { userId: 1, id: 101, title: 'foo', body: 'bar' };
+                const postResponse = await JSHTTP.post('https://jsonplaceholder.typicode.com/posts', postData);
+                console.log('POST Response:', postResponse);
             } catch (error) {
                 console.error('POST Error:', error);
+            }
+
+            try {
+                // Make a PUT request
+                const putData = { userId: 1, id: 1, title: 'updated title', body: 'updated body' };
+                const putResponse = await JSHTTP.put('https://jsonplaceholder.typicode.com/posts/1', putData);
+                console.log('PUT Response:', putResponse);
+            } catch (error) {
+                console.error('PUT Error:', error);
+            }
+
+            try {
+                // Make a DELETE request
+                const deleteResponse = await JSHTTP.delete('https://jsonplaceholder.typicode.com/posts/101');
+                console.log('DELETE Response:', deleteResponse);
+            } catch (error) {
+                console.error('DELETE Error:', error);
+            }
+
+            try {
+                // Make an OPTIONS request
+                const optionsData = { someOption: 'value' };
+                const optionsResponse = await JSHTTP.options('https://jsonplaceholder.typicode.com/some-resource', optionsData);
+                console.log('OPTIONS Response:', optionsResponse);
+            } catch (error) {
+                console.error('OPTIONS Error:', error);
+            }
+
+            try {
+                // Make a HEAD request
+                const headData = { someHeader: 'value' };
+                const headResponse = await JSHTTP.head('https://jsonplaceholder.typicode.com/some-resource', headData);
+                console.log('HEAD Response:', headResponse);
+            } catch (error) {
+                console.error('HEAD Error:', error);
+            }
+
+            try {
+                // Make a CONNECT request
+                const connectData = { someData: 'value' };
+                const connectResponse = await JSHTTP.connect('https://jsonplaceholder.typicode.com/some-resource', connectData);
+                console.log('CONNECT Response:', connectResponse);
+            } catch (error) {
+                console.error('CONNECT Error:', error);
+            }
+
+            try {
+                // Make a TRACE request
+                const traceData = { someData: 'value' };
+                const traceResponse = await JSHTTP.trace('https://jsonplaceholder.typicode.com/some-resource', traceData);
+                console.log('TRACE Response:', traceResponse);
+            } catch (error) {
+                console.error('TRACE Error:', error);
+            }
+
+            try {
+                // Make a PATCH request
+                const patchData = { someData: 'value' };
+                const patchResponse = await JSHTTP.patch('https://jsonplaceholder.typicode.com/some-resource', patchData);
+                console.log('PATCH Response:', patchResponse);
+            } catch (error) {
+                console.error('PATCH Error:', error);
             }
         }
 
         testJSHTTP();
+
     </script>
 </body>
 

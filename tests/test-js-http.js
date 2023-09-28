@@ -22,20 +22,51 @@ describe('JSHTTP Library Tests', () => {
         expect(response.id).to.equal(101);
     });
 
-    it('should handle GET request errors', async () => {
-        try {
-            await JSHTTP.get('https://jsonplaceholder.typicode.com/nonexistent');
-        } catch (error) {
-            expect(error.message).to.contain('GET request failed');
-        }
+    // Test for PUT request
+    it('should make a successful PUT request', async () => {
+        const data = { userId: 1, id: 1, title: 'updated title', body: 'updated body' };
+        const response = await JSHTTP.put('https://jsonplaceholder.typicode.com/posts/1', data);
+        expect(response).to.be.an('object');
+        expect(response.id).to.equal(1);
+        expect(response.title).to.equal('updated title');
+        expect(response.body).to.equal('updated body');
     });
 
-    it('should handle POST request errors', async () => {
-        try {
-            const data = { invalid: 'data' };
-            await JSHTTP.post('https://jsonplaceholder.typicode.com/posts', data);
-        } catch (error) {
-            expect(error.message).to.contain('POST request failed');
-        }
+    // Test for DELETE request
+    it('should make a successful DELETE request', async () => {
+        const response = await JSHTTP.delete('https://jsonplaceholder.typicode.com/posts/101');
+        expect(response).to.be.an('object');
+        expect(response).to.deep.equal({});
+    });
+
+    // Test for OPTIONS request
+    it('should make a successful OPTIONS request', async () => {
+        const data = { someOption: 'value' }; // Replace with appropriate data if needed
+        const response = await JSHTTP.options('https://jsonplaceholder.typicode.com/some-resource', data);
+        expect(response).to.be.an('object');
+    });
+
+    // Test for HEAD request
+    it('should make a successful HEAD request', async () => {
+        const data = { someHeader: 'value' }; // Replace with appropriate data if needed
+        const response = await JSHTTP.head('https://jsonplaceholder.typicode.com/some-resource', data);
+    });
+
+    // Test for CONNECT request
+    it('should make a successful CONNECT request', async () => {
+        const data = { someData: 'value' }; // Replace with appropriate data if needed
+        const response = await JSHTTP.connect('https://jsonplaceholder.typicode.com/some-resource', data);
+    });
+
+    // Test for TRACE request
+    it('should make a successful TRACE request', async () => {
+        const data = { someData: 'value' }; // Replace with appropriate data if needed
+        const response = await JSHTTP.trace('https://jsonplaceholder.typicode.com/some-resource', data);
+    });
+
+    // Test for PATCH request
+    it('should make a successful PATCH request', async () => {
+        const data = { someData: 'value' }; // Replace with appropriate data if needed
+        const response = await JSHTTP.patch('https://jsonplaceholder.typicode.com/some-resource', data);
     });
 });

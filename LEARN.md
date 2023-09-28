@@ -10,6 +10,7 @@ Welcome to the "Learn More" guide for JS-HTTP, a simple JavaScript HTTP request 
 - [Handling Responses](#handling-responses)
 - [Error Handling](#error-handling)
 - [Custom Headers](#custom-headers)
+- [Making Other HTTP Requests](#making-other-http-requests)
 - [Contributing](#contributing)
 
 ## Installation
@@ -106,8 +107,114 @@ JSHTTP.get('https://api.example.com/data', { headers: customHeaders })
   });
 ```
 
+## Making Other HTTP Requests
+
+JS-HTTP supports various other HTTP methods in addition to GET and POST. Here's how you can make requests using these methods:
+
+### PUT Request
+
+To make a PUT request, use the `put` method:
+
+```javascript
+JSHTTP.put('https://jsonplaceholder.typicode.com/posts/1', data)
+  .then(response => {
+    console.log('PUT Response:', response);
+  })
+  .catch(error => {
+    console.error('PUT Error:', error);
+  });
+```
+
+### DELETE Request
+
+To make a DELETE request, use the `delete` method:
+
+```javascript
+JSHTTP.delete('https://jsonplaceholder.typicode.com/posts/101')
+  .then(response => {
+    console.log('DELETE Response:', response);
+  })
+  .catch(error => {
+    console.error('DELETE Error:', error);
+  });
+```
+
+### OPTIONS Request
+
+To make an OPTIONS request, use the `options` method:
+
+```javascript
+JSHTTP.options('https://jsonplaceholder.typicode.com/some-resource', data)
+  .then(response => {
+    console.log('OPTIONS Response:', response);
+  })
+  .catch(error => {
+    console.error('OPTIONS Error:', error);
+  });
+```
+
+### HEAD Request
+
+To make a HEAD request, use the `head` method:
+
+```javascript
+JSHTTP.head('https://jsonplaceholder.typicode.com/some-resource', data)
+  .then(response => {
+    console.log('HEAD Response:', response);
+  })
+  .catch(error => {
+    console.error('HEAD Error:', error);
+  });
+```
+
+### CONNECT Request
+
+To make a CONNECT request, use the `connect` method:
+
+```javascript
+JSHTTP.connect('https://jsonplaceholder.typicode.com/some-resource', data)
+  .then(response => {
+    console.log('CONNECT Response:', response);
+  })
+  .catch(error => {
+    console.error('CONNECT Error:', error);
+  });
+```
+
+### TRACE Request
+
+To make a TRACE request, use the `trace` method:
+
+```javascript
+JSHTTP.trace('https://jsonplaceholder.typicode.com/some-resource', data)
+  .then(response => {
+    console.log('TRACE Response:', response);
+  })
+  .catch(error => {
+    console.error('TRACE Error:', error);
+  });
+```
+
+### PATCH Request
+
+To make a PATCH request, use the `patch` method:
+
+```javascript
+JSHTTP.patch('https://jsonplaceholder.typicode.com/some-resource', data)
+  .then(response => {
+    console
+
+.log('PATCH Response:', response);
+  })
+  .catch(error => {
+    console.error('PATCH Error:', error);
+  });
+```
+
 ## Contributing
 
 If you would like to contribute to the development of JS-HTTP, please read the [Contributing Guidelines](CONTRIBUTING.md) for information on how to get started.
 
 We welcome your contributions, bug reports, feature requests, and feedback!
+
+## Happy Coding 🚀

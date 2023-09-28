@@ -1,6 +1,9 @@
+Certainly! Here's your updated `README.md` file with similar calls for the other HTTP methods (PUT, DELETE, OPTIONS, HEAD, CONNECT, TRACE, PATCH) added to the Usage section:
+
+```markdown
 # JS-HTTP
 
-A simple JavaScript HTTP request library for making GET and POST requests using the Fetch API.
+A simple JavaScript HTTP request library for making GET, POST, PUT, DELETE, OPTIONS, HEAD, CONNECT, TRACE, and PATCH requests using the Fetch API.
 
 - [Installation](#installation)
 - [Project Structure](#project-structure)
@@ -18,7 +21,7 @@ A simple JavaScript HTTP request library for making GET and POST requests using 
 You can install JS-HTTP using npm:
 
 ```bash
-npm i https-node.js
+npm install https-node.js
 ```
 
 ## Project Structure
@@ -59,7 +62,7 @@ js-http/
 
 ## Overview
 
-JS-HTTP is a lightweight JavaScript library that simplifies making HTTP requests in your web applications. It provides a straightforward API for making GET and POST requests using the Fetch API.
+JS-HTTP is a lightweight JavaScript library that simplifies making various HTTP requests in your web applications. It provides a straightforward API for making GET, POST, PUT, DELETE, OPTIONS, HEAD, CONNECT, TRACE, and PATCH requests using the Fetch API.
 
 ## Examples
 
@@ -91,6 +94,77 @@ JSHTTP.post('https://jsonplaceholder.typicode.com/posts', data)
   .catch(error => {
     console.error('POST Error:', error);
   });
+
+// Make a PUT request
+const putData = { userId: 1, id: 1, title: 'updated title', body: 'updated body' };
+JSHTTP.put('https://jsonplaceholder.typicode.com/posts/1', putData)
+  .then(response => {
+    console.log('PUT Response:', response);
+  })
+  .catch(error => {
+    console.error('PUT Error:', error);
+  });
+
+// Make a DELETE request
+JSHTTP.delete('https://jsonplaceholder.typicode.com/posts/101')
+  .then(response => {
+    console.log('DELETE Response:', response);
+  })
+  .catch(error => {
+    console.error('DELETE Error:', error);
+  });
+
+// Make an OPTIONS request
+const optionsData = { someOption: 'value' };
+JSHTTP.options('https://jsonplaceholder.typicode.com/some-resource', optionsData)
+  .then(response => {
+    console.log('OPTIONS Response:', response);
+  })
+  .catch(error => {
+    console.error('OPTIONS Error:', error);
+  });
+
+// Make a HEAD request
+const headData = { someHeader: 'value' };
+JSHTTP.head('https://jsonplaceholder.typicode.com/some-resource', headData)
+  .then(response => {
+    console.log('HEAD Response:', response);
+  })
+  .catch(error => {
+    console.error('HEAD Error:', error);
+  });
+
+// Make a CONNECT request
+const connectData = { someData: 'value' };
+JSHTTP.connect('https://jsonplaceholder.typicode.com/some-resource', connectData)
+  .then(response => {
+    console.log('CONNECT Response:', response);
+  })
+  .catch(error => {
+    console.error('CONNECT Error:', error);
+  });
+
+// Make a TRACE request
+const traceData = { someData: 'value' };
+JSHTTP.trace('https://jsonplaceholder.typicode.com/some
+
+-resource', traceData)
+  .then(response => {
+    console.log('TRACE Response:', response);
+  })
+  .catch(error => {
+    console.error('TRACE Error:', error);
+  });
+
+// Make a PATCH request
+const patchData = { someData: 'value' };
+JSHTTP.patch('https://jsonplaceholder.typicode.com/some-resource', patchData)
+  .then(response => {
+    console.log('PATCH Response:', response);
+  })
+  .catch(error => {
+    console.error('PATCH Error:', error);
+  });
 ```
 
 ## License
@@ -104,3 +178,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **GitHub**: [PB2204](https://github.com/pb2204)
 
 Feel free to reach out for questions, feedback, or collaboration opportunities.
+
+## Happy Coding 🚀
