@@ -1,6 +1,3 @@
-Certainly! Here's your updated `README.md` file with similar calls for the other HTTP methods (PUT, DELETE, OPTIONS, HEAD, CONNECT, TRACE, PATCH) added to the Usage section:
-
-```markdown
 # JS-HTTP
 
 A simple JavaScript HTTP request library for making GET, POST, PUT, DELETE, OPTIONS, HEAD, CONNECT, TRACE, and PATCH requests using the Fetch API.
