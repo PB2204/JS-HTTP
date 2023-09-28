@@ -72,8 +72,10 @@ Here's how you can use JS-HTTP in your JavaScript code:
 ```javascript
 // Import the JS-HTTP library
 const JSHTTP = require('https-node.js);
+```
 
-// Make a GET request
+Make a `GET` request
+```javascript
 JSHTTP.get('https://jsonplaceholder.typicode.com/posts/1')
   .then(response => {
     console.log('GET Response:', response);
@@ -81,8 +83,10 @@ JSHTTP.get('https://jsonplaceholder.typicode.com/posts/1')
   .catch(error => {
     console.error('GET Error:', error);
   });
+  ```
 
-// Make a POST request
+Make a `POST` request
+```javascript
 const data = { userId: 1, id: 101, title: 'foo', body: 'bar' };
 JSHTTP.post('https://jsonplaceholder.typicode.com/posts', data)
   .then(response => {
@@ -91,8 +95,10 @@ JSHTTP.post('https://jsonplaceholder.typicode.com/posts', data)
   .catch(error => {
     console.error('POST Error:', error);
   });
+  ```
 
-// Make a PUT request
+Make a `PUT` request
+```javascript
 const putData = { userId: 1, id: 1, title: 'updated title', body: 'updated body' };
 JSHTTP.put('https://jsonplaceholder.typicode.com/posts/1', putData)
   .then(response => {
@@ -101,8 +107,10 @@ JSHTTP.put('https://jsonplaceholder.typicode.com/posts/1', putData)
   .catch(error => {
     console.error('PUT Error:', error);
   });
+  ```
 
-// Make a DELETE request
+Make a `DELETE` request
+```javascript
 JSHTTP.delete('https://jsonplaceholder.typicode.com/posts/101')
   .then(response => {
     console.log('DELETE Response:', response);
@@ -110,8 +118,10 @@ JSHTTP.delete('https://jsonplaceholder.typicode.com/posts/101')
   .catch(error => {
     console.error('DELETE Error:', error);
   });
+  ```
 
-// Make an OPTIONS request
+Make an `OPTIONS` request
+```javascript
 const optionsData = { someOption: 'value' };
 JSHTTP.options('https://jsonplaceholder.typicode.com/some-resource', optionsData)
   .then(response => {
@@ -120,8 +130,10 @@ JSHTTP.options('https://jsonplaceholder.typicode.com/some-resource', optionsData
   .catch(error => {
     console.error('OPTIONS Error:', error);
   });
+  ```
 
-// Make a HEAD request
+Make a `HEAD` request
+```javascript
 const headData = { someHeader: 'value' };
 JSHTTP.head('https://jsonplaceholder.typicode.com/some-resource', headData)
   .then(response => {
@@ -130,8 +142,10 @@ JSHTTP.head('https://jsonplaceholder.typicode.com/some-resource', headData)
   .catch(error => {
     console.error('HEAD Error:', error);
   });
+  ```
 
-// Make a CONNECT request
+Make a `CONNECT` request
+```javascript
 const connectData = { someData: 'value' };
 JSHTTP.connect('https://jsonplaceholder.typicode.com/some-resource', connectData)
   .then(response => {
@@ -140,8 +154,10 @@ JSHTTP.connect('https://jsonplaceholder.typicode.com/some-resource', connectData
   .catch(error => {
     console.error('CONNECT Error:', error);
   });
+  ```
 
-// Make a TRACE request
+Make a `TRACE` request
+```javascript
 const traceData = { someData: 'value' };
 JSHTTP.trace('https://jsonplaceholder.typicode.com/some
 
@@ -152,8 +168,10 @@ JSHTTP.trace('https://jsonplaceholder.typicode.com/some
   .catch(error => {
     console.error('TRACE Error:', error);
   });
+  ```
 
-// Make a PATCH request
+Make a `PATCH` request
+```javascript
 const patchData = { someData: 'value' };
 JSHTTP.patch('https://jsonplaceholder.typicode.com/some-resource', patchData)
   .then(response => {
