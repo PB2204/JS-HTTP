@@ -1,0 +1,36 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS-HTTP Library Test</title>
+</head>
+
+<body>
+    <h1>JS-HTTP Library Test</h1>
+    <script src="dist/js-http.min.js"></script>
+    <script>
+        async function testJSHTTP() {
+            try {
+                const response = await JSHTTP.get('https://jsonplaceholder.typicode.com/posts/1');
+                console.log('GET Response:', response);
+            } catch (error) {
+                console.error('GET Error:', error);
+            }
+
+            try {
+                const data = { userId: 1, id: 101, title: 'foo', body: 'bar' };
+                const response = await JSHTTP.post('https://jsonplaceholder.typicode.com/posts', data);
+                console.log('POST Response:', response);
+            } catch (error) {
+                console.error('POST Error:', error);
+            }
+        }
+
+        testJSHTTP();
+    </script>
+</body>
+
+</html>

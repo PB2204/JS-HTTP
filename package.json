@@ -1,0 +1,34 @@
+{
+    "name": "https-node.js",
+    "description": "A simple HTTP request library for JavaScript.",
+    "url": "https://github.com/pb2204/JS-HTTP",
+    "keywords": [
+        "http request",
+        "ajax request",
+        "http server",
+        "ajax server",
+        "get method",
+        "post method"
+    ],
+    "author": "Pabitra Banerjee",
+    "contributors": [],
+    "license": "MIT",
+    "lib": ".",
+    "main": "dist/js-http.min.js",
+    "version": "1.0.0",
+    "scripts": {
+        "test": "mocha tests/test-js-http.js",
+        "build": "webpack --mode production"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pb2204/JS-HTTP"
+    },
+    "devDependencies": {
+        "chai": "^4.3.9",
+        "chai-http": "^4.4.0",
+        "mocha": "^10.2.0",
+        "webpack": "^5.88.2",
+        "webpack-cli": "^5.1.4"
+    }
+}
