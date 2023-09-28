@@ -15,7 +15,7 @@
     "license": "MIT",
     "lib": ".",
     "main": "dist/js-http.min.js",
-    "version": "1.1.5",
+    "version": "1.1.6",
     "scripts": {
         "test": "mocha tests/test-js-http.js",
         "build": "webpack --mode production"
